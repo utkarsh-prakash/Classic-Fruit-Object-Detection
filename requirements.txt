@@ -1,0 +1,7 @@
+Cython==0.29.22
+Flask==1.1.2
+matplotlib==3.4.2
+opencv-python-headless
+pandas==1.2.3
+tensorflow-cpu==2.5.0
+gunicorn

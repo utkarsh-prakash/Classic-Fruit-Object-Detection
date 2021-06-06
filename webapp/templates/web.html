@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="static/css/main.css">
+<script src="static/script/main.js"></script>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+        <h1 style="font-size:250%">Fruit Basket</h1>
+    </div>
+    <div class="tab-left-text">
+        <a href="/"><h3>Home</h3></a>
+    </div>
+    <div class="tab-mid-text">
+        <h3>About</h3>
+    </div>
+    <div class="tab-mid-2-text">
+        <h3>Go Live!</h3>
+    </div>
+    <div class="tab-right-text">
+        <a href="https://github.com/utkarsh-prakash/Classic-Fruit-Object-Detection" target="_blank"><h3>Github</h3></a>
+    </div>
+    <div class="image-prediction">
+        <p align="center"><img id="result" width="40%" hight="40%" src="{{ predict_path }}" style="object-fit: cover;"/></p>
+    </div>
+    <form action = "/post_data" method = "POST" enctype=multipart/form-data>
+        <div class="image-upload">
+            <p align="center"><input type="file"  accept="image/jpeg, image/png" name="image" id="file"  onchange="loadFile(event)" 
+                                    style="display: none;"/></p>
+            <p align="center"><img id="output" width="40%" hight="40%" src="static/images/upload.png" 
+                                style="object-fit: cover;"/></p>
+            <p align="center"><label for="file" 
+                                    style="cursor: pointer; background-color:#F5B041; font-family: 'Comic Sans MS', 'Comic Sans', 
+                                            cursive; border-radius: 25px; padding: 2%;">Upload Your Fruit Basket
+                            </label>
+            </p>
+        </div>
+        <div class="predict-button">
+            <p align="center"><input type="submit" value="What's in the basket?" style="border: none; background-color:#F5B041; 
+                font-family: 'Comic Sans MS', 'Comic Sans', cursive; border-radius: 20px; padding: 2%; font-size: medium;"/>
+            </p>
+        </div>
+    </form>
+    
+</body>
